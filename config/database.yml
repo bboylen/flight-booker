@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: flight_booker_development
+
+test:
+  <<: *default
+  database: flight_booker_test
+
+production:
+  <<: *default
+  database: flight_booker_production
+  username: bboylen
+  password: 
