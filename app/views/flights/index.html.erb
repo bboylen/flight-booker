@@ -1,0 +1,16 @@
+<%= form_with(url: flights_path, method: :get) do %>
+  <%= label_tag(:from_airport_id, "Departing from: ")%>
+  <%= select_tag(:from_airport_id, options_for_select(@from_airport_options))%>
+  <br>
+  <%= label_tag(:to_airport_id, "Destination: ")%>
+  <%= select_tag(:to_airport_id, options_for_select(@to_airport_options))%>
+  <br>
+  <%= label_tag(:passengers, "Passenger Count: ")%>
+  <%= select_tag(:passengers, options_for_select([['1',1], ['2',2], ['3',3], ['4',4]]))%>
+  <br>
+  <%= label_tag(:date, "Date: ")%>
+  <%= select_tag(:date, options_from_collection_for_select(Flight.all, :start, :start_date_formatted)) %>
+  <br>
+  <%= submit_tag("Search") %>
+<% end %>
+

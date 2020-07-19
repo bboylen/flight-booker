@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  duration: 2020-07-14 17:16:15
+  start: 2020-07-14 17:16:15
+  from_airport: 1
+  to_airport: 1
+
+two:
+  duration: 2020-07-14 17:16:15
+  start: 2020-07-14 17:16:15
+  from_airport: 1
+  to_airport: 1
