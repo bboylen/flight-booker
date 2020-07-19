@@ -1,3 +1,5 @@
+<h1>Flight Selection</h1>
+
 <%= form_with(url: flights_path, method: :get, local: true) do %>
   <%= label_tag(:from_airport_id, "Departing from: ")%>
   <%= select_tag(:from_airport_id, options_for_select(@from_airport_options))%>
@@ -15,7 +17,7 @@
 <% end %>
 
 <% if @flights%>
-  <%= form_with(url: flights_path, method: :get, local: true) do %>
+  <%= form_with(url: new_booking_path, method: :get, local: true) do %>
     <table>
       <thead>
         <tr>

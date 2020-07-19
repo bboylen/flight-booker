@@ -1,0 +1,8 @@
+<h1>Create Booking</h1>
+
+<%= form_with(model: @booking, url: "/bookings/create", method: :post, local: true) do %>
+  <%= label_tag(:flight_id, "Chosen flight is flight ##{@flight.id}, from #{@flight.from_airport.code} 
+                            to #{@flight.to_airport.code} on #{@flight.date_formatted}.")%>
+  <%= hidden_field_tag :flight_id, @flight.id%>
+  <%= submit_tag("Submit") %>
+<% end %>
