@@ -4,7 +4,12 @@ class Flight < ApplicationRecord
   belongs_to :to_airport, class_name: "Airport",
                        foreign_key: "to_airport_id"
 
-  def start_date_formatted
-    start.strftime("%m/%d/%Y")
+  def date_formatted
+    date.strftime("%m/%d/%Y")
   end
+
+  def time_formatted
+    start.strftime("%I:%M%p")
+  end
+
 end
