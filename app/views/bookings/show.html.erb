@@ -1,0 +1,11 @@
+Congratulations, your booking is complete 
+<% @names.length.times do |l|%>
+  <%=@names[l]%>
+  <% if l < @names.length - 1%>
+    ,
+  <%else%>
+    .
+  <%end%>
+<%end%>
+<br>
+You are going from <%= @from_airport%> to <%= @to_airport%> on <%= @date%>

@@ -10,7 +10,7 @@ class FlightsController < ApplicationController
       @flights = Flight.where("date = ?", params[:date]).
                         where("from_airport_id = ?",params[:from_airport_id]).
                         where("to_airport_id = ?",params[:to_airport_id]).
-                        where("open_seats > ?",params[:passengers])
+                        where("open_seats >= ?",params[:passengers])
       @passengers = params[:passengers]
     end
   end
